@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .Menu {
+    float:left;
+    width:100%;
+    background-color:orange;
+    margin:0;
+    padding:0;
+    cursor:pointer;
+    font-weight:bold;
+    }
+.Menu ul {
+    list-style-type:none;
+    float:left;
+    margin:0;
+    padding:5px;
+
+    
+}
+.Menu li {
+    list-style-type:none;
+    float:left;
+    margin:0 5px;
+    padding:5px;
+    color:white;
+    background-color:orange;
+    
+}
+.Menu li:hover {
+    background-color:red;
+}
+.Menu li ul {
+    float: left;
+    list-style-type: none;
+    margin: 5px 0 0 -5px;
+    padding: 0;
+    position: absolute;
+    width: 150px;
+    z-index: 1000;
+    display:none;
+}
+.Menu li .SubMenu li {
+    list-style-type:none;
+    float:left;
+    margin:0;
+    padding:5px;
+    width:100px;
+    background-color:red;
+}
+.Menu li .SubMenu li:hover {
+    background-color:peru;
+}
+.Menu a {
+        text-decoration:none;
+        color:white;
+    }
+    </style>
+    <script type="text/javascript">
+    function showmenu(cnt) {
+        cnt.getElementsByTagName("ul")[0].style.display = "block";
+
+    }
+    function hidemenu(cnt) {
+        cnt.getElementsByTagName("ul")[0].style.display = "none";
+
+    }
+    </script>
+
+</head>
+<body>
+    <ul class="Menu">
+        <li onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+            Menu1
+            <ul class="SubMenu">
+                <li><a href="#">Submenu1</a></li>
+                <li><a href="#">Submenu2</a></li>
+            </ul>
+        </li>
+        <li onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+            Menu2
+            <ul class="SubMenu">
+                <li><a href="#">Submenu1</a></li>
+                <li><a href="#">Submenu2</a></li>
+                <li><a href="#">Submenu3</a></li>
+            </ul>
+        </li>
+        <li onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+            Menu3
+            <ul class="SubMenu">
+                <li><a href="#">Submenu1</a></li>
+                <li><a href="#">Submenu2</a></li>
+                <li><a href="#">Submenu3</a></li>
+                <li><a href="#">Submenu4</a></li>
+                <li><a href="#">Submenu5</a></li>
+                <li><a href="#">Submenu6</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</body>
+</html>
